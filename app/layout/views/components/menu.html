@@ -1,0 +1,37 @@
+<nav class="menu container">
+    <ul class="menu__wrapper">
+    <li class="menu__item--all">
+        <button>
+            <svg viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.25 0H0.75C0.3375 0 0 0.3375 0 0.75C0 1.1625 0.3375 1.5 0.75 1.5H14.25C14.6625 1.5 15 1.1625 15 0.75C15 0.3375 14.6625 0 14.25 0ZM14.25 4.98H0.75C0.3375 4.98 0 5.3175 0 5.73C0 6.1425 0.3375 6.48 0.75 6.48H14.25C14.6625 6.48 15 6.1425 15 5.73C15 5.3175 14.6625 4.98 14.25 4.98ZM14.25 9.96H0.75C0.3375 9.96 0 10.2975 0 10.71C0 11.1225 0.3375 11.46 0.75 11.46H14.25C14.6625 11.46 15 11.1225 15 10.71C15 10.2975 14.6625 9.96 14.25 9.96Z" />
+                </svg>
+        </button>
+       <a>Ver todas</a>
+       <ul class="menu__list--all">
+        {% for level1 in categories %}
+            <li class="menu__item--all-sub">
+            <a href="#">{{ level1.name|capitalize }}</a>
+        {% endfor %}
+      </ul>
+    </li>
+        {% for level1 in categories %}
+        <li class="menu__item--level1">
+            <a href="">{{ level1.name|capitalize }}</a>
+            <ul class="menu__list--level2">
+                    {% for level2 in level1.children %}
+                    <li class="menu__item--level2">
+                    <a href="#">{{ level2.name|capitalize }}</a>
+                    <ul class="menu__list--level3">
+                            {% for level3 in level2.children %}
+                            <li class="menu__item--level3">
+                                <a href="#">{{ level3.name|capitalize }}</a>
+                            </li>
+                            {% endfor %}
+                    </ul>
+                    </li>
+                    {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

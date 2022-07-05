@@ -1,0 +1,39 @@
+$color1: #16BA9D;
+$color2: #128A75;
+
+$medium: 768px;
+
+$transition: all 0.3s ease-in-out;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+main{
+    height: 1000px;
+    background-color: #75bbaf;
+    opacity: 0.2;
+
+}
+
+ul, li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+

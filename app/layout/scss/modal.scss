@@ -1,0 +1,86 @@
+.modal{
+    height: 100vh;
+    width: 75%;
+    position: fixed;
+    z-index: 3;
+    background: $color2;
+    transform: translateX(-100%);
+    transition: $transition;
+    opacity: 0;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: -6px -1px 14px 2px rgb(0 0 0 / 10%);
+
+    button{
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        background: none;
+        padding: 5px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg{
+            fill: #fff;
+        }
+    }
+
+    &__item{
+        font-size: 16px;
+        margin-bottom: 20px;
+        
+        a{
+            color: #fff;
+            border-bottom: 1px solid #40a391;
+            width: 100%;
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        &--level2{
+            font-size: 14px;
+            margin-bottom: 10px;
+
+            a{
+                border: none;
+            }
+        }
+    }
+
+    &__infos{
+        color: #fff;
+
+        div{
+           margin: 20px 0;
+        }
+    }
+
+    &.open{
+        transform: translateX(0%);
+        opacity: 1;
+        overflow: normal;
+    }
+
+    &__background{
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+    }
+
+    &__list{
+        max-height: 400px;
+        overflow: scroll;
+        &--level2{
+            display: none;
+            margin-top: 15px;
+            margin-left: 15px;
+
+            &.active{
+                display: block;
+            }
+        }
+    }
+}

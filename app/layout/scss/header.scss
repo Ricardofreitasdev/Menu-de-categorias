@@ -1,0 +1,189 @@
+.header{
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+
+    @media (max-width: $medium) {
+        padding: 10px;
+      }
+
+    &__content{
+        display: flex;
+
+        @media (max-width: $medium) {
+            width: 100%;
+          }
+
+    }
+
+    &__search{
+        position: relative;
+        border-radius: 5px;
+        border: solid 1px $color1;
+        overflow: hidden;
+        margin-right: 15px;
+
+        @media (max-width: $medium) {
+            width: 100%;
+            margin-right: 0px;
+          }
+
+        input {
+            min-width: 400px;
+            height: 46px;
+            outline: none;
+            padding: 10px;
+            border: none;
+            font-size: 16px;
+            color: #aaaaaa;
+            font-family: 'Montserrat', sans-serif;
+
+            @media (max-width: $medium) {
+                min-width: auto;
+                height: 36px;
+              }
+        
+
+            &::placeholder{
+                font-size: 16px;
+                color: #aaaaaa;
+                font-family: 'Montserrat', sans-serif;
+
+            }
+        }
+
+        button{
+            position: absolute;
+            right: 0;
+            width: 48px;
+            border: none;
+            background-color: $color1;
+            height: 48px;
+            cursor: pointer;
+
+            @media (max-width: $medium) {
+                height: 36px;
+                width: 36px;
+              }
+
+            svg{
+                height: 20px;
+                fill: #fff;
+
+                @media (max-width: $medium) {
+                    height: 15px;
+
+                  }
+            }
+        }
+    }
+
+    &__main{
+        position: relative;
+        background-color: #fff;
+        padding: 15px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+
+        @media (max-width: $medium) {
+            flex-direction: column;
+            padding: 0px;
+
+          }
+    }
+
+    &__left{
+        max-width: 200px;
+        height: 48px;
+
+        @media (max-width: $medium) {
+            max-width: none;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+          }
+
+        svg{
+            width: 100%;
+        }
+
+        a{
+            max-width: 150px;
+        }
+
+        span, button{
+            display: none;
+            background: none;
+            border: none;
+            outline: none;
+            padding: 5px;
+
+            @media (max-width: $medium) {
+             display: flex;
+
+             button{
+                cursor: pointer;
+             }
+
+             svg{
+                width: 20px;
+                fill: $color1;
+             }
+            }
+        }
+    }
+
+    &__icons{
+        display: flex;
+         align-items: center;
+         position: relative;
+
+         @media (max-width: $medium) {
+            display: none;
+          }
+
+         &--cart{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: $color1;
+            right: 0;
+            top: 0;
+            color: #fff;
+            font-size: 10px;
+
+            @media (max-width: $medium) {
+                height: 15px;
+                width: 15px;
+              }
+         }
+        span {
+            height: 48px;
+            width: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            svg{
+                fill: $color1;
+                height: 20px;
+                opacity: 50%;
+                transition: $transition;
+
+                &:hover{
+                opacity: 1;
+            }
+        }
+        }
+    }
+
+}
